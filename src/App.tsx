@@ -10,7 +10,7 @@ function App() {
     <>
       <Box display="flex" justifyContent="center" mt={-93}>
         <Box position="relative" maxW="500px" w="100%">
-          <Image alt="logo" src="/logo.png" w="100%" h="auto" />
+          <Image alt="logo" src="logo.png" w="100%" h="auto" />
           <Box
             position="absolute"
             top="90%"
@@ -25,7 +25,7 @@ function App() {
             outlineOffset="2px"
           >
             <Image
-              src="/avatar.png"
+              src="avatar.png"
               alt="avatar"
               w="100%"
               h="100%"
