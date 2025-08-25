@@ -1,9 +1,10 @@
 import "./App.css";
-import { Box, Button, Image, Text, Link } from "@chakra-ui/react";
+import { Box, Button, Image, Text, Link, Heading } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
+import Carousel from "./components/carousel";
 
 function App() {
   return (
@@ -61,7 +62,8 @@ function App() {
           textDecoration="none"
         >
           <Button
-            colorPalette="orange"
+            colorPalette="green"
+            variant="surface"
             px={6}
             py={4}
             borderRadius="xl"
@@ -69,9 +71,20 @@ function App() {
             alignItems="center"
             gap={2}
           >
-            <FaWhatsapp size={20} /> Agendar Consulta
+            <FaWhatsapp size={20} /> Agende uma Consulta agora mesmo!
           </Button>
         </Link>
+      </Box>
+      <Box paddingTop={8} px={6}>
+        <Heading as="h1" pb={3}>
+          Serviços
+        </Heading>
+        <Carousel />
+      </Box>
+      <Box paddingTop={8} px={6}>
+        <Heading as="h1" pb={3}>
+          Me Acompanhe
+        </Heading>
       </Box>
       <Box display="flex" justifyContent="center" paddingTop={5}>
         <Link
@@ -81,6 +94,7 @@ function App() {
         >
           <Button
             colorPalette="orange"
+            variant="surface"
             px={6}
             py={4}
             borderRadius="xl"
@@ -93,17 +107,29 @@ function App() {
         </Link>
       </Box>
       <Box display="flex" justifyContent="center" paddingTop={5}>
-        <Button
-          colorPalette="orange"
-          px={6}
-          py={4}
-          borderRadius="xl"
-          display="flex"
-          alignItems="center"
-          gap={2}
+        <Link
+          href={"https://www.facebook.com/share/19JVXQ1uUr/?mibextid=wwXIfr"}
+          target="_blank"
+          textDecoration="none"
         >
-          <FaFacebook size={20} /> Facebook
-        </Button>
+          <Button
+            colorPalette="orange"
+            variant="surface"
+            px={6}
+            py={4}
+            borderRadius="xl"
+            display="flex"
+            alignItems="center"
+            gap={2}
+          >
+            <FaFacebook size={20} /> Facebook
+          </Button>
+        </Link>
+      </Box>
+      <Box paddingTop={8} px={6}>
+        <Heading as="h1" pb={3}>
+          Meu Consultório
+        </Heading>
       </Box>
       <Box display="flex" justifyContent="center" paddingTop={5}>
         <Link
@@ -115,6 +141,7 @@ function App() {
         >
           <Button
             colorPalette="orange"
+            variant="surface"
             px={6}
             py={4}
             borderRadius="xl"
@@ -126,6 +153,7 @@ function App() {
           </Button>
         </Link>
       </Box>
+
       <Box
         paddingTop={3}
         marginTop={6}
