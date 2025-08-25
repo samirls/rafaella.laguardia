@@ -71,22 +71,22 @@ function App() {
             alignItems="center"
             gap={2}
           >
-            <FaWhatsapp size={20} /> Agende uma Consulta agora mesmo!
+            <FaWhatsapp size={20} /> Agende Uma Consulta Agora Mesmo!
           </Button>
         </Link>
       </Box>
-      <Box paddingTop={8} px={6}>
-        <Heading as="h1" pb={3}>
+      <Box paddingTop={8} >
+        <Heading as="h1" pb={6} px={6} display={{ base: "block", md: "flex" }} justifyContent={{ md: "center" }}>
           Serviços
         </Heading>
         <Carousel />
       </Box>
       <Box paddingTop={8} px={6}>
-        <Heading as="h1" pb={3}>
+        <Heading as="h1" pb={6} display={{ base: "block", md: "flex" }} justifyContent={{ md: "center" }}>
           Me Acompanhe
         </Heading>
       </Box>
-      <Box display="flex" justifyContent="center" paddingTop={5}>
+      <Box display="flex" justifyContent="center">
         <Link
           href={"https://www.instagram.com/dra.rafaellalaguardia/"}
           target="_blank"
@@ -126,12 +126,12 @@ function App() {
           </Button>
         </Link>
       </Box>
-      <Box paddingTop={8} px={6}>
-        <Heading as="h1" pb={3}>
+      <Box paddingTop={10} px={6}>
+        <Heading as="h1" pb={6} display={{ base: "block", md: "flex" }} justifyContent={{ md: "center" }}>
           Meu Consultório
         </Heading>
       </Box>
-      <Box display="flex" justifyContent="center" paddingTop={5}>
+      <Box display="flex" justifyContent="center">
         <Link
           href={
             "https://www.google.com/maps/place/Unique+Mall/@-20.2526042,-40.2723591,17.29z/data=!3m1!5s0x9d94076e3355a7:0x627c634979d79d56!4m6!3m5!1s0xb81855c44fd1c5:0xb13e19437c27dd74!8m2!3d-20.2518882!4d-40.2721748!16s%2Fg%2F11g4dw78r_?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
@@ -153,10 +153,30 @@ function App() {
           </Button>
         </Link>
       </Box>
+            <Box display="flex" justifyContent="center" paddingTop={5}>
+        <Link
+          href={"https://api.whatsapp.com/send?phone=5527996145531"}
+          target="_blank"
+          textDecoration="none"
+        >
+          <Button
+            colorPalette="green"
+            variant="surface"
+            px={6}
+            py={4}
+            borderRadius="xl"
+            display="flex"
+            alignItems="center"
+            gap={2}
+          >
+            <FaWhatsapp size={20} /> Agendar Consulta
+          </Button>
+        </Link>
+      </Box>
 
       <Box
         paddingTop={3}
-        marginTop={6}
+        marginTop={10}
         backgroundColor="#f2e7db"
         textAlign="center"
         height={{ base: "100px", md: "13vh" }}
