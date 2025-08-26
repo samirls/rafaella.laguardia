@@ -5,10 +5,12 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import Carousel from "./components/Carousel";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
     <>
+      <Analytics />
       <Box display="flex" justifyContent="center" mt={-93}>
         <Box position="relative" maxW="500px" w="100%">
           <Image alt="logo" src="logo.png" w="100%" h="auto" />
@@ -75,14 +77,25 @@ function App() {
           </Button>
         </Link>
       </Box>
-      <Box paddingTop={8} >
-        <Heading as="h1" pb={6} px={6} display={{ base: "block", md: "flex" }} justifyContent={{ md: "center" }}>
+      <Box paddingTop={8}>
+        <Heading
+          as="h1"
+          pb={6}
+          px={6}
+          display={{ base: "block", md: "flex" }}
+          justifyContent={{ md: "center" }}
+        >
           Serviços
         </Heading>
         <Carousel />
       </Box>
       <Box paddingTop={8} px={6}>
-        <Heading as="h1" pb={6} display={{ base: "block", md: "flex" }} justifyContent={{ md: "center" }}>
+        <Heading
+          as="h1"
+          pb={6}
+          display={{ base: "block", md: "flex" }}
+          justifyContent={{ md: "center" }}
+        >
           Me Acompanhe
         </Heading>
       </Box>
@@ -127,7 +140,12 @@ function App() {
         </Link>
       </Box>
       <Box paddingTop={10} px={6}>
-        <Heading as="h1" pb={6} display={{ base: "block", md: "flex" }} justifyContent={{ md: "center" }}>
+        <Heading
+          as="h1"
+          pb={6}
+          display={{ base: "block", md: "flex" }}
+          justifyContent={{ md: "center" }}
+        >
           Meu Consultório
         </Heading>
       </Box>
@@ -153,7 +171,7 @@ function App() {
           </Button>
         </Link>
       </Box>
-            <Box display="flex" justifyContent="center" paddingTop={5}>
+      <Box display="flex" justifyContent="center" paddingTop={5}>
         <Link
           href={"https://api.whatsapp.com/send?phone=5527996145531"}
           target="_blank"
