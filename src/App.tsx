@@ -77,6 +77,20 @@ function App() {
           </Button>
         </Link>
       </Box>
+            <Box paddingTop={8}>
+        <Heading
+          as="h1"
+          pb={6}
+          px={6}
+          display={{ base: "block", md: "flex" }}
+          justifyContent={{ md: "center" }}
+        >
+          Pediatria em Vitória
+        </Heading>
+        <Text px={6} textAlign="justify">A Dra. Rafaella Laguardia é médica com experiência em atender pediatria, com consultório em Vitória-ES, no bairro Jardim Camburi. Atende bebês, crianças e
+    adolescentes, oferecendo acompanhamento completo em <em>pediatria infantil</em> e
+    consultas presenciais para todas as idades.</Text>
+      </Box>
       <Box paddingTop={8}>
         <Heading
           as="h1"
@@ -197,12 +211,12 @@ function App() {
         marginTop={10}
         backgroundColor="#f2e7db"
         textAlign="center"
-        height={{ base: "100px", md: "13vh" }}
+        height={{ base: "", md: "13vh" }}
       >
         <Box fontSize="0.9rem" fontWeight="semibold">
           Unique Mall
         </Box>
-        <Box fontSize="0.8rem" px={10}>
+        <Box fontSize="0.8rem" px={10} pb={3}>
           Av. Armando Duarte Rabello, 126 - Jardim Camburi, Vitória - ES,
           29092-280
         </Box>
