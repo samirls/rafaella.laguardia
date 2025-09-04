@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { register } from "swiper/element/bundle";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Box, Image, Text } from "@chakra-ui/react";
 
 register();
@@ -12,20 +13,22 @@ export default function Carousel() {
     <Box display="flex" justifyContent="center">
       <Box maxWidth={{ base: "300px", md: "500px" }}>
         <Swiper
-          modules={[Navigation]}
-          navigation
+          pagination={{
+            type: "progressbar",
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation={true}
           spaceBetween={20}
           slidesPerView={1}
           loop={true}
         >
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="babysize2.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="babysize2.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -60,12 +63,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="vacinnation.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="vacinnation.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -99,12 +97,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="babylunch.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="babylunch.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -139,12 +132,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="babysize3.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="babysize3.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -179,12 +167,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="child.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="child.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -219,12 +202,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="morebaby.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="morebaby.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -259,12 +237,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="babyhug.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="babyhug.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -299,12 +272,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="babymilk.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="babymilk.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -338,12 +306,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="teens.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="teens.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
@@ -378,12 +341,7 @@ export default function Carousel() {
 
           <SwiperSlide>
             <Box position="relative">
-              <Image
-                src="kidsmile.png"
-                alt="Sorriso saudável"
-                borderRadius="lg"
-                w="100%"
-              />
+              <Image src="kidsmile.png" alt="Sorriso saudável" w="100%" />
               <Text
                 as="h2"
                 position="absolute"
