@@ -1,11 +1,13 @@
 import "./App.css";
 import { Box, Button, Image, Text, Link, Heading } from "@chakra-ui/react";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+import { FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaHeart } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import Carousel from "./components/Carousel";
 import { Analytics } from "@vercel/analytics/react";
+import { Drawer } from "@chakra-ui/react";
+import DrawerLinks from "./components/DrawerLinks";
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
             top="90%"
             left="50%"
             transform="translate(-50%, -50%)"
-            w="120px"
-            h="120px"
+            w="140px"
+            h="140px"
             borderRadius="full"
             overflow="hidden"
             outline="2px solid"
@@ -28,11 +30,10 @@ function App() {
             outlineOffset="2px"
           >
             <Image
-              src="avatar.png"
+              src="rafa-capa.jpg"
               alt="avatar"
-              w="100%"
-              h="100%"
               objectFit="cover"
+              transform="scale(1.2)"
             />
           </Box>
         </Box>
@@ -77,7 +78,7 @@ function App() {
           </Button>
         </Link>
       </Box>
-            <Box paddingTop={8}>
+      <Box paddingTop={8}>
         <Heading
           as="h1"
           pb={6}
@@ -87,9 +88,13 @@ function App() {
         >
           Pediatria em Vitória
         </Heading>
-        <Text px={6} textAlign="justify">A Dra. Rafaella Laguardia é médica com experiência em atender pediatria, com consultório em Vitória-ES, no bairro Jardim Camburi. Atende bebês, crianças e
-    adolescentes, oferecendo acompanhamento completo em <em>pediatria infantil</em> e
-    consultas presenciais para todas as idades.</Text>
+        <Text px={6} textAlign="justify">
+          A Dra. Rafaella Laguardia é médica com experiência em atender
+          pediatria, com consultório em Vitória-ES, no bairro Jardim Camburi.
+          Atende bebês, crianças e adolescentes, oferecendo acompanhamento
+          completo em <em>pediatria infantil</em> e consultas presenciais para
+          todas as idades.
+        </Text>
       </Box>
       <Box paddingTop={8}>
         <Heading
@@ -110,7 +115,7 @@ function App() {
           display={{ base: "block", md: "flex" }}
           justifyContent={{ md: "center" }}
         >
-          Me Acompanhe
+          Me Siga
         </Heading>
       </Box>
       <Box display="flex" justifyContent="center">
@@ -130,6 +135,26 @@ function App() {
             gap={2}
           >
             <FaInstagram size={20} /> Instagram
+          </Button>
+        </Link>
+      </Box>
+      <Box display="flex" justifyContent="center" paddingTop={5}>
+        <Link
+          href={"https://www.youtube.com/@Dra.RafaellaLaguardia"}
+          target="_blank"
+          textDecoration="none"
+        >
+          <Button
+            colorPalette="orange"
+            variant="surface"
+            px={6}
+            py={4}
+            borderRadius="xl"
+            display="flex"
+            alignItems="center"
+            gap={2}
+          >
+            <FaYoutube size={20} /> Youtube
           </Button>
         </Link>
       </Box>
@@ -204,6 +229,36 @@ function App() {
             <FaWhatsapp size={20} /> Agendar Consulta
           </Button>
         </Link>
+      </Box>
+
+      <Box paddingTop={10} px={6}>
+        <Heading
+          as="h1"
+          pb={6}
+          display={{ base: "block", md: "flex" }}
+          justifyContent={{ md: "center" }}
+        >
+          Navegue Mais
+        </Heading>
+      </Box>
+      <Box display="flex" justifyContent="center">
+        <Drawer.Root key={"start"} placement={"start"}>
+          <Drawer.Trigger asChild>
+            <Button
+              colorPalette="orange"
+              variant="surface"
+              px={6}
+              py={4}
+              borderRadius="xl"
+              display="flex"
+              alignItems="center"
+              gap={2}
+            >
+              <FaHeart size={20} /> Dicas para Mamães
+            </Button>
+          </Drawer.Trigger>
+          <DrawerLinks />
+        </Drawer.Root>
       </Box>
 
       <Box
